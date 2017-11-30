@@ -3,98 +3,33 @@
     
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Warnes" rel="stylesheet" type="text/css">
-    
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    
+    <link rel="stylesheet" type="text/css" href="index.css">
     <title>Tribute to the "King of Pop"</title>
     
-<style>
-    .button {
-        box-sizing: border-box;
-        padding: 10px;
-        border: none;
-        font: normal 50px/normal "Warnes", Helvetica, sans-serif;
-        color: rgba(255,255,255,1);
-        text-decoration: normal;
-        text-align: center;
-        text-overflow: clip;
-        white-space: pre;
-        text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff00de , 0 0 70px #ff00de , 0 0 80px #ff00de , 0 0 100px #ff00de ;
-        transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
-    }
-    .button:hover {
-        font: normal 48px/normal "Warnes", Helvetica, sans-serif;
-        text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
-    }
-    .main-photo {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        min-height: 700px;
-    }
-    body {
-        background-color: black;
-        color: white;
-    }
-    p {
-        text-align: left;
-        font-size: 16px;
-        font-family:sans-serif, Times New Roman;
-    }
-    h1 {
-        text-align: center;
-        font-size: 50px;
-        font-family:"Lobster", Times New Roman;
-        color: black;
-        padding: 5px;
-    }
-    h3 {
-        text-align: center;
-        font-size: 25px;
-        font-family:sans-serif,Times New Roman;
-    }
-    #overwrite {
-        color: mediumpurple;
-        font-size: 20px;
-        font-family: "Lobster", Times New Roman;
-    }
-    </style>
 </head>
 <body>
-    <div class="container" style="background-color: darkred">
-        <div class="row">
-            <div class="col">
-                <form><input type="button" value="Home" onclick="window.location.href='file:///C:/Users/gcunn/Documents/Brackets%20Projects/TributePage/TributePage.html'" />
-                </form>
-            </div>
-            <div class="col">
-                <form><input type="button" value="Photo Gallery" onclick="window.location.href='file:///C:/Users/gcunn/Documents/Brackets%20Projects/TributePage/TributePhotos.html'" />
-                </form>
-            </div>
-            <div class="col">
-                <form action="/search-field"><input type="text" placeholder="Search Our Site">
-                </form>
-            </div>
-            <div class="col">
-                <button type="submit">Submit</button>
-            </div>
-            <div class="col-6">
-            </div>
-        </div>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="TributePhotos.html">Photos</a>
+        <form action="/search-field">
+            <input type="text" placeholder="Search Our Site">
+        </form>
+        <button type="submit">Submit</button>
+        <!--<a href="#contact"></a>-->
+        <!--<a href="#about"></a>-->
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
-        <div>
-            <h1 class="button">Michael Jackson</h1>
-            <h3><em>Just doing as well as you did last time is not good enough.</em></h3>
-        </div>
-            <br>
-        <div class="main-photo">
-            <img style="width: 477px; width: 33%"   src="https://i.pinimg.com/736x/53/97/f2/5397f2057310a7bd38e53ad4b0e03a0f--public-bathrooms-king.jpg"
+    <div>
+        <h1 class="title">Michael Jackson</h1>
+        <h3><em>Just doing as well as you did last time is not good enough.</em></h3>
+    </div>
+    <br>
+        <div class="main-photo container-fluid">
+            <img src="https://i.pinimg.com/736x/53/97/f2/5397f2057310a7bd38e53ad4b0e03a0f--public-bathrooms-king.jpg"
             alt="Classic Michael"
             onmouseover="this.src='https://media.giphy.com/media/ZYnjTLT6JynyE/giphy.gif'"
             onmouseout="this.src='https://i.pinimg.com/736x/53/97/f2/5397f2057310a7bd38e53ad4b0e03a0f--public-bathrooms-king.jpg'">
@@ -143,11 +78,18 @@
                 </ul>
         </div>
 </div>
-    
- <!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+}
+</script>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    
 </body>
 </html>
